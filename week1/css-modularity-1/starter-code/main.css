@@ -1,1 +1,127 @@
-/* ADD YOUR STYLES HERE */
+/* Data Table */
+
+.table1 td{
+    font-weight:bold; 
+    padding-bottom: 10px;
+    padding-right: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-bottom-style:solid;
+}
+
+.table2 td{
+    font-weight:bold; 
+    padding-bottom: 10px;
+    padding-right: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-bottom-style:solid;
+}
+
+/* Stats */
+.stats{
+    font-weight: 1000;
+    border-top-style: inset;
+    border-bottom-style: inset;
+    padding-top: 100px;
+    font-size: xx-large;
+}
+
+.small{
+    font-size:small;
+    color:gray;
+    padding-right: 100px;
+    padding-bottom: 20px;
+}
+
+/* Bar Chart */
+
+.borders{
+   font-weight:bold; 
+    border-bottom-style:solid;
+} 
+
+.barChart{
+   width: 100%; 
+}
+
+.barChart td {
+    width:100%;
+}
+
+.colors {
+    background-color:blue;
+    padding:5px;
+}
+.fontcolor{
+    color: white; 
+}
+
+/* Lightbox */
+/*
+
+.lightbox {
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 5;
+}
+
+.background {
+    width:100%;
+    height:100%;
+    background:rgba(76,76,76,.8);
+    text-align: center;
+    
+}
+
+.Hellotext{
+  text-align:left;  
+}
+
+.p{
+    font-weight: bold;
+}
+
+.background2 {
+   background:#fff;
+   display:inline-block;
+   width:500px;
+   position:relative;
+   top:50%;
+   padding: 20px;
+   border-radius:10px;
+}
+
+.close {
+    border-color:#ff1a1a;
+    background-color:#ff6666;
+    border-style:solid;
+    border-radius:5px;
+    float:right;
+    color:white;
+    padding:15px;
+}
+*/
+
+/*Media Block*/
+
+h1,h2 {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.pic{
+    float:left;
+}
+
+.line{
+    font-weight:bold;
+    margin-left: 50px;
+}
+
+.float{
+   margin-left: 50px; 
+}
