@@ -1,0 +1,14 @@
+body {
+    background-color : burlywood;
+}
+
+/*class selector */
+.archieBunker {
+    
+}
+
+/* ID selector */
+#super-div{}
+/*Selecting by ID is very narrowly focused, only one element can have the id*/
+
+.box-structure
