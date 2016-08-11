@@ -1,0 +1,166 @@
+/* ADD YOUR STYLES HERE */
+
+/*Horizontally Spaced*/
+.padding{
+padding-left:50px;
+}
+
+.padding1{
+vertical-align:top;
+padding-right: 40px;
+float:left;
+}
+
+.padding2{
+float:left;
+padding-right:20px;
+font-weight: bolder;
+}
+/*Vertically Spaced*/
+.vertical{
+margin-top: 100px;
+margin-bottom: 100px; 
+}
+
+.margin{
+margin-top: 100px;
+margin-bottom: 100px;
+font-weight: bolder;
+}
+/*Horizontal List*/
+.horizontal li{
+display: inline-block;
+float:left;
+list-style: none;
+}
+
+/*Buttons*/
+.buttons{
+color: white;
+font-weight: bolder;
+background-color:#F55858;
+font-size: larger;
+text-decoration: none;
+border-radius: 5px;
+display:inline-block;
+}
+.button0{
+padding:40px 70px;
+font-size: x-large
+}
+.button1{
+padding:20px 50px;   
+}
+.button2{
+padding: 10px 20px;
+}
+
+.elements{
+color: white;
+font-weight: bolder;
+background-color:#F55858;
+font-size: large;
+text-decoration: none;
+display:inline-block; 
+padding:5px 20px;
+border-radius: 5px;
+border-style: none;
+
+
+}
+
+/*Navigation*/
+.navigation{
+list-style: none;
+font-size: large;
+display: inline-flex;
+}
+.space{
+padding: 5px 30px;
+border-radius: 5px;
+text-decoration: none;
+color: white;
+font-weight: bold;
+background-color:#F55858;
+}
+/*Pagination*/
+.pagination{
+list-style: none;
+padding: 0;
+margin: 0;
+display: inline-flex;
+}
+.pagination li a{
+padding:12px 12px;
+font-size: large; 
+font-weight: bold;
+color: #F55858;
+}
+.active{
+color:gray;
+text-decoration: underline
+}
+/*Comment Stream*/
+.post{
+display:flex;
+}
+.post .image{
+float:left;
+}
+.post .strong{
+padding-left: 10px;
+}
+.post .time{
+color:grey;
+font-size: xx-small;
+}
+.post .p{
+font-weight:bold;
+padding-left: 10px;
+font-size:smaller;
+}
+.nested_post{
+display:flex;   
+}
+.nested_image{
+padding-left: 20px;
+padding-bottom: 20px;
+}
+.nested_strong{
+padding-left: 10px;   
+}
+.nested_time{
+color:grey;
+font-size: xx-small;  
+}
+.nested_p{
+font-weight:bold;
+padding-left: 10px;
+font-size:smaller;    
+}
+/*Tabs*/
+.tab .clickme{
+display:inline-block;
+border:2px #6699ff solid;
+padding: 10px;
+border-radius: 10px 10px 0px 0px;
+font-weight: bolder;
+color:#6699ff;
+border-bottom:none;
+}
+.tab .clickme a{
+text-decoration: none;
+}
+.paragraph{
+color:black;
+font-weight: bold;
+font-size:small;
+border:2px #6699ff solid; 
+border-radius: 10px 0px 0px 0px;
+padding: 10px;
+}
+.second{
+position:relative;
+top:2px;
+background:white;
+}
