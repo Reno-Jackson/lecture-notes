@@ -30,8 +30,8 @@ ul li{
 
 
 p{
-margin-top: 100px;
-margin-bottom: 100px;
+    width:60%;
+    margin:100px auto;
 }
 /*Footer*/
 h3{
