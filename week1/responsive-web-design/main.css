@@ -1,0 +1,44 @@
+/*Title*/
+h1{
+text-align: center;
+-webkit-text-fill-color: #228b22;
+-webkit-text-stroke-width: 1px;
+}
+/*Navigation*/
+.navbar{
+    list-style: none;
+    font-size: large;
+    display: inline-flex;
+    list-style-type: none;
+    text-align: center;
+    border: 2px #114511;
+    background-color: #228b22;
+    font-weight:bolder;
+    font: 30px arial, sans-serif;
+    text-decoration: none;
+}
+img{
+    margin-left: 650px;;
+}
+
+ul li{
+    padding: 10px 140px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+p{
+margin-top: 100px;
+margin-bottom: 100px;
+}
+/*Footer*/
+h3{
+    text-align: center;
+    font-size: xx-large;
+    font-weight:bolder;
+    -webkit-text-fill-color: #228b22;
+    -webkit-text-stroke-width: 1px;  
+}
+/*About Us*/
