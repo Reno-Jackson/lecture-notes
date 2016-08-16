@@ -1,4 +1,5 @@
 // Typical Questions from Basic FL Creeps
+digitz2();
 
 // Phone Number
 function digitz2() {
@@ -14,7 +15,6 @@ function digitz2() {
         digitz2();
     }
 }
-digitz2();
 
 // Birthday
 function birfday2() {
@@ -30,7 +30,6 @@ function birfday2() {
         birfday2();
     }
 }
-birfday2();
 
 // Zipcode
 function datzip2() {
@@ -46,7 +45,7 @@ function datzip2() {
         datzip2();
     }
 }
-datzip2();
+
 
 // States
  function statez2() {
@@ -63,7 +62,6 @@ datzip2();
             statez2();
      }
  }
-statez2();
 
 // Marriage
 function wifey() {
