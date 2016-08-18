@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap!</title>
+        <!---CDN - content delivery network -->
+        <!--- go here: https://www.bootstrapcdn.com/, copy -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    
+    <body class="container">
+        <header>
+            <nav class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>    
+                </ul>
+            </nav>
+        </header>
+    <!-- elements with ids are assumed to appear only once in a page-->
+    <!-- IDs are stronger selectors than classes, so they can easily -->
+    <section id="content">
+        <div class="jumbotron">
+            <h1>Hello Squirrel</h1>
+            <p>Let's go Nuts</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more about nuts</a></p>
+</div>
+    <div id="the-defactos" class="row">
+        <div class="col-md-4 well">Learn about my nuts!</div>
+        <div class="col-md-4 well">Dive in my Hole!</div>
+        <div class="col-md-4 well">Climb up my tree!</div>
+    </div>
+    <form class="form-inline well">
+        <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" type="email" placeholder="Enter your Name" />
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" type="email" placeholder="Enter your email address" />
+    </div>
+    </form>
+    </section>
+        <footer class="well">
+            <p class="text-center">&copy Copywright 3216</p>
+        </footer>
+    </body>
+</html>
