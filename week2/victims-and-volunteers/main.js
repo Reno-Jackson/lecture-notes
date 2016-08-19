@@ -32,5 +32,3 @@ for (var i = 0; i < volunteer; i++) {
 };
 prompt("Your victims are " + victimsarray)
 prompt("Your volunteers " + volunteerarray)
-console.log(victimsarray)
-console.log(volunteerarray)
