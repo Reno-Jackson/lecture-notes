@@ -2,7 +2,7 @@
 
 // Question 1.) 0 to 500 incrementing by the hundreds
 
-for( var i = 0; i <=500; i=i+100){
+for( var i = 0; i <=500; i+=100){
     console.log(i);
 }
 
@@ -15,9 +15,10 @@ for (var i=1; i <=64; i=i*2){
 // Question 3.) 1 to 3 each number loops 3 times
 
 for (var i=1; i <=3; i++){
-    console.log(i);
-    console.log(i);
-    console.log(i);
+    for(var b=1; b<4; b++){
+        console.log(i); 
+    }
+    console.log(b);
 }
 
 // Question 4.) 0 to 10 incrementing by 2
