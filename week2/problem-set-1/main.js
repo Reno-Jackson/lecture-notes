@@ -1,14 +1,22 @@
 // JS. Problem Set #1
+console.log("asdfghjkl")
+    // Question 1.) funtion letterCapitalize
+var newstring = "";
 
-// Question 1.) funtion letterCapitalize
-
-function letterCapitalize(myString) {
-    // console.log(word.length + word.charAt(0) + word.toUpperCase()  + " " )
-    var words = myString.split(" ");
-    console.log(words);
+function letterCapitalize(word) {
+    var array = (word.split(" "));
+    for (var index = 0; index < array.length; index++) {
+        console.log(array[index]);
+        var string = array[index].charAt(0).toUpperCase() + array[index].substring(1);
+        console.log(string);
+        newstring = newstring + " " + string;
+    }
+    console.log(newstring);
 }
-// //  Question 2.) Word Count total
-// function wordCount(string) {
-//     var string = 1
-//     console.log(string + (string.length))
-// }
+
+// Question 2.) Word Count total
+
+function wordCount(string) {
+    var array = string.split(" ");
+    console.log(array.length)
+}
