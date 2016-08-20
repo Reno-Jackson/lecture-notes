@@ -1,5 +1,6 @@
 // For Loop Practice 1
 
+
 // Question 1.) 0 to 500 incrementing by the hundreds
 
 for( var i = 0; i <=500; i+=100){
