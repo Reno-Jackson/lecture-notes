@@ -14,6 +14,7 @@ function letterCapitalize(word) {
     console.log(newstring);
 }
 
+
 // Question 2.) Word Count total
 
 function wordCount(string) {
