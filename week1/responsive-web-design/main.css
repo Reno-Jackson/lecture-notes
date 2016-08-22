@@ -18,7 +18,7 @@ text-align: center;
     text-decoration: none;
 }
 img{
-    margin-left: 650px;;
+    margin-left: 650px;
 }
 
 ul li{
@@ -41,4 +41,16 @@ h3{
     -webkit-text-fill-color: #228b22;
     -webkit-text-stroke-width: 1px;  
 }
-/*About Us*/
+/*Media Queries*/
+@media(min-width:960px){
+    img{ margin-left:33%;
+    }
+    .navbar{
+        
+    }
+}
+
+@media(min-width:600px){
+    img{ margin-left:30%;
+    }
+}
