@@ -33,7 +33,7 @@
             <h1>Card Gallery</h1>
             <li class="cardForm" ng-repeat="card in gCtrl.cardlist" style="background-color: {{card.manaColor}}">
                 <h3>{{card.name}}</h3>
-                {{card.manaColor}}
+                {{gCtrl.colortransform(card)}}
                 {{card.power}}
                 {{card.toughness}}
                 <img class="cardimage" ng-src="{{card.art}}">

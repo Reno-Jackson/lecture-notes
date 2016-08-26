@@ -21,11 +21,28 @@
 
         gCtrl.cardlist=nerdBinder.cardBinder
 
-        // function colortransform () {
-        //     if (Ctrl.card.manaColor === "dimgray")
-        //     console.log("Black Mana")
-        //     return "Black Mana"
-        // }
+        function colortransform (card) {
+            if (card.manaColor === "dimgray")
+            return "Black Mana"
+
+            else if(card.manaColor === "peachpuff")
+            return "White Mana"
+
+            else if(card.manaColor === "dodgerblue")
+            return "Blue Mana"
+
+            else if(card.manaColor === "dodgerblue")
+            return "Blue Mana"
+
+            else if(card.manaColor === "crimson")
+            return "Red Mana"
+
+            else(card.ManaColor === "forestgreen")
+            return "Green Mana"
+
+        }
+        gCtrl.colortransform=colortransform;
+
 
     }
 
