@@ -1,0 +1,22 @@
+.cardForm {
+    border: 10px solid black;
+    border-radius: 10px;
+    height: 400px;
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 20px;
+    display:inline-block;
+    color:white;
+    -webkit-text-stroke: .5px Black;
+}
+h3 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+}
+
+.cardimage {
+    width:250px;
+    height:200px;
+    border-radius:10px;
+}

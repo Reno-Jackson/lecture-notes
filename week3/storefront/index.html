@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="Magic Mike">
+<head>
+    <title>Magical Card Emporium</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="main.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Welcome to the Magical Card Emporium</h1>
+    <hr>
+    <h3>Add New Cards to the Binder</h3>
+    <hr>
+    <form ng-controller="Card as cCtrl" ng-submit="cCtrl.newCard()">
+        <input type="text" placeholder="NAME" ng-model="cCtrl.card.name"/>
+        <select ng-model="cCtrl.card.manaColor">
+            <option value="dimgray">Black Mana</option>
+            <option value="peachpuff">White Mana</option>
+            <option value="dodgerblue">Blue Mana</option>
+            <option value="crimson">Red Mana</option>
+            <option value="forestgreen">Green Mana</option>
+        <input type="number" placeholder="POWER" ng-model="cCtrl.card.power"/>
+        <input type="number" placeholder="TOUGHNESS" ng-model="cCtrl.card.toughness"/>
+        <input type="text" placeholder="GIF" ng-model="cCtrl.card.art"/>
+        <button type="submit">Add Card</button>
+    </form>
+    <hr>
+    <ul>
+        <section ng-controller="Gallery as gCtrl">
+            <h1>Card Gallery</h1>
+            <li class="cardForm" ng-repeat="card in gCtrl.cardlist" style="background-color: {{card.manaColor}}">
+                <h3>{{card.name}}</h3>
+                {{card.manaColor}}
+                {{card.power}}
+                {{card.toughness}}
+                <img class="cardimage" ng-src="{{card.art}}">
+            </li>
+        </section>
+    </ul>
+
+
+</body>
+
+
+
+</html>
