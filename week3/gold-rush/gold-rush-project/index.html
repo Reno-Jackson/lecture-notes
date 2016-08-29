@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="GoldRush">
+    <head>
+        <title>Gold-Rush</title>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script src="main.js"></script>
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+        <link rel="stylesheet" href="map.css" />
+    </head>
+    <body>
+        <!-- with controller as, we will leverage the `this` keyword -->
+        <section ng-controller="GoldStreakMarkers as goldMarkers">
+            <div id="markers">
+                <p
+                    class="marker"
+                    ng-repeat="goldFound in goldMarkers.markers"
+                    ng-style="goldFound"
+                    ng-click="goldMarkers.removeMarker($event, $index)"
+                >
+                </p>
+            </div>
+            <div id="map" ng-click="goldMarkers.addMarker($event)">
+                <img width="100%" src="topo-co.jpg" alt="Colorado"/>
+            </div>
+        </section>
+    </body>
+</html>
