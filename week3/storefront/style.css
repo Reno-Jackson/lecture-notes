@@ -1,14 +1,41 @@
+/*Background Image and Page Font Style*/
+html body{
+  background-image: url("https://newevolutiondesigns.com/images/freebies/black-wallpaper-28.jpg");
+  color:white;
+  font-weight: bolder;
+
+}
+.jumbotron{
+    background-color: transparent;
+
+}
+/*////////////////////////////////////////////////////////////*/
+
+/*Informamtion Input Area*/
+.form-control[type="number"]{
+    width:200px;
+}
+
+.form-inline{
+text-align: center;
+}
+
+.btn-success{
+    width:140px;
+}
+/*Card-Style*/
 .cardForm {
     border: 10px solid black;
     border-radius: 10px;
-    height: 400px;
+    height: 420px;
     width: 300px;
     padding: 10px;
     box-sizing: border-box;
     margin: 20px;
     display:inline-block;
-    color:white;
     -webkit-text-stroke: .5px Black;
+    position: relative;
+    float:left;
 }
 h3 {
     margin: 0 0 10px 0;
@@ -20,3 +47,13 @@ h3 {
     height:200px;
     border-radius:10px;
 }
+
+.cardFooter{
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+}
+/*////////////////////////////////////////////////////////////*/
