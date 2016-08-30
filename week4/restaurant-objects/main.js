@@ -19,7 +19,7 @@ class Food {
 
 
 var food = new Food("Steak", "Dinner", "400", "Vegan Friendly", "Gluten Free", "Citrus Free")
- dish.stringify()
+ food.stringify()
 
 
 
@@ -27,12 +27,12 @@ var food = new Food("Steak", "Dinner", "400", "Vegan Friendly", "Gluten Free", "
 /////////////////////////Restaurant Objects Part Douche//////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-class Drink{
+class Drink {
     constructor(drkName, drkDesc, drkPrice, fooditemIng){
     this.drkName = drkName;
     this.drkDesc = drkDesc;
-    this.drkPrice = drkPrice;
-    this.fooditemIng = fooditemIng;
+    this.drkPrice = drkPrice;//number
+    this.fooditemIng = fooditemIng;//Array of fiiditem ingredients
     }
     stringify(){
         console.log();
@@ -40,40 +40,49 @@ class Drink{
 }
 var drink = new Drink("Mary-Marigarita", "A delightfully intoxicating kick to the groin", "$36.01", ["Band-Aid brand Band-Aids", "Ox-Blood", "Seagram 7 Vodka, Bath Water Edition", "Fresh Mint", "Dried Tears"])
 drink.stringify()
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Plate{
     constructor(plateName, plateDesc, platePrice, fooditemIng){
         this.plateName = plateName;
         this.plateDesc = plateDesc;
-        this.platePrice = platePrice;
-        this.fooditemIng = fooditemIng;
+        this.platePrice = platePrice;//number
+        this.fooditemIng = fooditemIng;//Array of Food Item Ingredients
     }
     stringify(){
-        console.log();
+        console.log(this.plateName, this.plateDesc, this.platePrice, this.fooditemIng);
     }
 }
-var plate =new Plate("Kitchen Sink", "All the things you didn't want in your meal", "1st Mortgage", ["Ox Meat", "Browner Mustard", "Day-Old French Fries", "Spit a.k.a. Colorado All-Spice", "Whole, Un-Sliced Tomatoes"])
-plate.stringify()
+var plate1 =new Plate("Kitchen Sink", "All the things you didn't want in your meal", "1st Mortgage", ["Ox Meat", "Browner Mustard", "Day-Old French Fries", "Spit a.k.a. Colorado All-Spice", "Whole, Un-Sliced Tomatoes"])
+var plate2 =new Plate ("Santa Maria", "It's mean and crucifies you for eating it", "2 Human fetuses", ["Flour Tortilla", "Beans and Rice", "Side of Salsa", "Queso Fresco", "Lettuce" , "Tomatoes & Guacamole", "Goat Meat harvested by our own Chupacabra"])
+var plate3 =new Plate("Diet Dinner", "For those with weight loss in mind", "50 Air Squats", ["Bowl", "Ice Cubes", "More Ice Cubes", "Pinch of Salt"])
+plate1.stringify()
+plate2.stringify()
+plate3.stringify()
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Order{
     constructor(plate){
-        this.plate = plate;
+        this.plate = plate; //Array of Plate plates
     }
-}
     stringify(){
-        console.log();
-
+        for (var i = 0; i < this.plate.length; i++){
+            this.plate[i].stringify()
+        }
+    }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Menu{
-    constructor(menuPlate){
-        this.menuPlate;
+    constructor(Plate){
+        this.plate; //Array of Plate plates
     }
     stringify(){
-        console.log();
+        for(var i=0; i < this.plate.length; i++){
+            this.plate[i].stringify()
+        }
 
     }
 }
+var menu = new Menu ([plate1, plate2, plate3, drink])
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Restaurant{
     constructor(resName, resDesc, resMenu){
@@ -82,17 +91,18 @@ class Restaurant{
     this.resMenu = resMenu;
     }
     stringify(){
-        console.log();
+        console.log(this.resName, this.resDesc, this.resMenu);
 
     }
 }
+var restaurant =new Restaurant("Kombucha", "An Organicly Fair traded Lie", menu);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Customer{
     constructor(dietPref){
     this.dietPref=dietPref;
     }
     stringify(){
-        console.log();
+        console.log(dietPref);
 
     }
 }
