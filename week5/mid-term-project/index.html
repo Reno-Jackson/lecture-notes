@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html ng-app="http-app">
+    <head>
+        <title>HTTP Project</title>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+        <script src="/main.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+        <header>
+            <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fitness <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+            </ul>
+          </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Food<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+
+
+
+
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Fitness</li>
+                        <form>
+                            <select>
+                                <option value="" disabled>Exercise</option>
+                                <option value="">Cardio</option>
+                                <option value="">Outdoors</option>
+                                <option value="">Weight-Lifting</option>
+                                <option value="">Calisthetics</option>
+                                <option value="">At Home</option>
+                            </select>
+                        <form>
+                    <li>Food Choices</li>
+                        <form>
+                            <select>
+                                <option value="" disabled>Eating</option>
+                                <option value="">Carnivore</option>
+                                <option value="">Omnivore</option>
+                                <option value="">Pescatarian</option>
+                                <option value="">Vegetarian</option>
+                                <option value="">Vegan</option>
+                            </select>
+                        <form>
+                    <li>HTTP</li>
+                        <form>
+                            <select>
+                                <option value="">Learn More</option>
+                            </select>
+                </ul>
+            </nav>
+        </header>
+
+<hr>
+
+    <section ng-controller="health as hCtrl">
+        <h3>7-Day Exercise Plan</h3>
+                <form>
+                    <select>
+                        <option value="" disabled>Select Your Exercise Plan</option>
+                        <option value="">Cardio</option>
+                        <option value="">Outdoors</option>
+                        <option value="">Weight-Lifting</option>
+                        <option value="">Calisthetics</option>
+                        <option value="">At Home</option>
+                    </select>
+            <button ng-click="hCtrl.testAPI()">Generate Exercises</button>
+                <ul>
+                    <li ng-repeat="exercise in hCtrl.healthData.results">{{exercise.name}}:
+                        <div ng-bind-html="hCtrl.$sce.trustAsHtml(exercise.description)"></div>
+                    </li>
+                </ul>
+            </form>
+        </section>
+
+
+<hr>
+    <section ng-controller="recipe as rCtrl">
+        <h3>7-Day Eating Plan</h3>
+            <form>
+                <select>
+                    <option value="" disabled>Select Your Eating Plan</option>
+                    <option value="">Carnivore</option>
+                    <option value="">Omnivore</option>
+                    <option value="">Pescatarian</option>
+                    <option value="">Vegetarian</option>
+                    <option value="">Vegan</option>
+                </select>
+                <input type="text" placeholder="Search Here" ng-model="rCtrl.searchTerm">
+                    <button ng-click="rCtrl.testAPI()">Get Delicious Recipes</button>
+                        <ul>
+                            <li ng-repeat="recipe in rCtrl.recipeData.matches">
+                                <h4>{{recipe.recipeName}}</h4>
+                                <img src="{{recipe.smallImageUrls[0]}}"></img>
+                                <ul>
+                                    <li ng-repeat="ingredient in recipe.ingredients">
+                                        {{ingredient}}
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+            </form>
+    </section>
+        <footer>
+            <h3>About Us</h3>
+            <p>Farts taste like snozzberries</p>
+            <p>Contact Us @ <a href=>clownpenis.fart.edu</a></p>
+        </footer>
+        </div>
+    </body>
+</html>
