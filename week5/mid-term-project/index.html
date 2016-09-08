@@ -14,11 +14,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body>
+    <body ng-controller="recipe as rCtrl">
         <div class="container">
         <header>
             <nav class="navbar navbar-default">
-  <div class="container-fluid">
+            <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -29,30 +29,52 @@
       </button>
       <a class="navbar-brand" href="#">Home</a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Dropdown Section for Fitness iFrames -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fitness <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Cardio</a></li>
-              <li><a href="#">Outdoors</a></li>
-              <li><a href="#">Body-Building</a></li>
-              <li><a href="#">Calisthetics</a></li>
-              <li><a href="#">At Home</a></li>
+              <li><a href="//www.bodyrock.tv/workouts/" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Cardio</a></li>
+              <li><a href="//www.getoutdoorscolorado.org/" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Outdoors</a></li>
+              <li><a href="//www.bodybuilding.com" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Body-Building</a></li>
+              <!-- <li><a href="//www.bodybuilding.com" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Calisthetics</a></li> -->
+              <li><a href="//www.calm.com/" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Meditation</a></li>
+              <li><a href="//www.doyogawithme.com/" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Yoga</a></li>
             </ul>
-          </li>
+            </li>
+        </ul>
+<!--Search Section for Exercises-->
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search Exercises">
+          </div>
+          <button type="submit" class="btn btn-default">Jacked Swool!</button>
+        </form>
+
+<!-- Dropdown Section for Food iFrames -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Food<span class="caret"></span></a>
           <ul class="dropdown-menu">
-              <li><a href="#">Carnivores</a></li>
-              <li><a href="#">Omnivores</a></li>
-              <li><a href="#">Pescatarians</a></li>
-              <li><a href="#">Vegetarians</a></li>
-              <li><a href="#">Vegan</a></li>
+              <li><a href="//jesspryles.com/category/recipes/" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Carnivores</a></li>
+              <li><a href="//omnivorescookbook.com/" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Omnivores</a></li>
+              <li><a href="//pescetarian.kitchen/" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Pescatarians</a></li>
+              <li><a href="//www.vegweb.com/" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Vegetarians</a></li>
+              <li><a href="//www.vegan.com/" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="800" data-featherlight="iframe">Vegan</a></li>
+          </ul>
           </ul>
         </li>
+      </ul>
+<!--Search Option for Yummly API-->
+      <form  class="navbar-form navbar-left" ng-submit="rCtrl.testAPI()">
+        <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search Recipes" ng-model="rCtrl.searchTerm">
+                         <button type="submit" class="btn btn-default">Foodify Me!</button>
+
+<!-- Dropdown Section for HTTP about area -->
+      <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HTTP<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -67,41 +89,36 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+
+            <!-- <nav class="navbar navbar-default">
+            <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
         </header>
 
 <hr>
-    <section ng-controller="health as hCtrl">
-        <br>
-        <h3>7-Day Exercise Plan</h3>
-            <button type="submit" ng-click="hCtrl.testAPI()">Generate Exercises</button>
-                <ul>
-                    <li ng-repeat="exercise in hCtrl.healthData.results">{{exercise.name}}:
-                        <div ng-bind-html="hCtrl.$sce.trustAsHtml(exercise.description)"></div>
-                    </li>
-                </ul>
-        </section>
-
-
+<br>
 <hr>
-    <section ng-controller="recipe as rCtrl">
-        <h3>7-Day Eating Plan</h3>
-        <form ng-submit="rCtrl.testAPI()">
+    <section>
+        <!-- <form ng-submit="rCtrl.testAPI()">
             <input type="text" placeholder="Search Here" ng-model="rCtrl.searchTerm">
                 <button type="submit" >Get Delicious Recipes</button>
-        </form>
-                    <ul>
-                        <li ng-repeat="recipe in rCtrl.recipePageData">
-                            <h3>{{recipe.recipeName}}:
-                                <a href="{{recipe.recipeURL}}" data-featherlight-iframe-width="1000" data-featherlight-iframe-height="800" data-featherlight="iframe">Click for Recipe</a>
-                            </h3>
-                            <img src="{{recipe.smallImageUrls[0]}}"></img>
-                            <ul>
-                                <li ng-repeat="ingredient in recipe.ingredients">
-                                    {{ingredient}}
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+        </form> -->
+                <ul>
+                    <li ng-repeat="recipe in rCtrl.recipePageData">
+                        <h3>{{recipe.recipeName}}:
+                            <a href="{{recipe.recipeURL}}" data-featherlight-iframe-width="1000" data-featherlight-iframe-height="800" data-featherlight="iframe">Click for Recipe</a>
+                        </h3>
+                        <img src="{{recipe.smallImageUrls[0]}}"></img>
+                        <ul>
+                            <li ng-repeat="ingredient in recipe.ingredients">
+                                {{ingredient}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
                     <nav ng-if="rCtrl.recipeData.matches" aria-label="Page navigation">
                       <ul class="pagination">
                         <li>
@@ -131,7 +148,7 @@
         <footer>
             <h3>About Us</h3>
             <p>Farts taste like snozzberries</p>
-            <p>Contact Us @ <a href=>clownpenis.fart.edu</a></p>
+            <p>Contact Us @ <a href=>clownpenis.slurprise.edu</a></p>
         </footer>
         </div>
     </body>

@@ -15,7 +15,7 @@ angular.module("http-app",[])
         hCtrl.$sce=$sce;
         hCtrl.testAPI = function () {
             console.info("healthController is loaded");
-            $http.get("https://wger.de/api/v2/exercise?language=2&")
+            $http.get("https://wger.de/api/v2/?language=2&"+hCtrl.searchTerm)
             .then(function (response){
                 console.log("Response from API: ", response.data);
                 hCtrl.healthData = response.data;
@@ -29,6 +29,7 @@ angular.module("http-app",[])
 
     function recipeController ($http, $sce){
         var rCtrl = this;
+        window.rCtrl=rCtrl;
         rCtrl.searchTerm;
         rCtrl.$sce = $sce
         rCtrl.testAPI = function () {
@@ -65,6 +66,8 @@ angular.module("http-app",[])
             // page 2 is elements 10 through 20...
 
             rCtrl.recipePageData = rCtrl.recipeData.matches.slice(10*(pageNum-1),10*(pageNum-1)+10);
+
+            console.log(rCtrl.recipeData);
         }
 
     }
