@@ -1,3 +1,5 @@
-.show{
-    border:3px red solid;
+.navbar{
+    position: fixed;
+    width: 90%;
+    border-radius: 10px;
 }
