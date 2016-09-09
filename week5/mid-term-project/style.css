@@ -1,5 +1,48 @@
+body, html{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
 .navbar{
     position: fixed;
     width: 100%;
     border-radius: 10px;
+}
+
+/*.dropdown-menu li:hover {
+    background-color:black;
+}
+
+.dropdown-menu li{
+        background-color: transparent;
+        transition: background-color 750ms ease-in-out;
+}*/
+
+/*@media (min-width:960px){
+    .dropdown-menu li:hover {
+        background-color:black;
+    }
+    .dropdown-menu{
+            background-color: #333;
+            transition: background-color 750ms ease-in-out;
+
+    }
+}*/
+
+#loading img{
+    border-radius: 200px;
+    width:250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loading{
+    position: absolute;
+    z-index:10;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
 }

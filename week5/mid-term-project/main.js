@@ -3,25 +3,25 @@
 /////////////////////////////////////////////////////////////////////////////////////
 
 angular.module("http-app",[])
-    .controller("health",healthController)
+    // .controller("health",healthController)
     .controller("recipe",recipeController)
     // .factory
 
-    healthController.$inject = ["$http","$sce"];
+    // healthController.$inject = ["$http","$sce"];
     recipeController.$inject = ["$http", "$sce"];
 
-    function healthController ($http, $sce){
-        var hCtrl = this;
-        hCtrl.$sce=$sce;
-        hCtrl.testAPI = function () {
-            console.info("healthController is loaded");
-            $http.get("https://wger.de/api/v2/?language=2&"+hCtrl.searchTerm)
-            .then(function (response){
-                console.log("Response from API: ", response.data);
-                hCtrl.healthData = response.data;
-            });
-        }
-    }
+    // function healthController ($http, $sce){
+    //     var hCtrl = this;
+    //     hCtrl.$sce=$sce;
+    //     hCtrl.testAPI = function () {
+    //         console.info("healthController is loaded");
+    //         $http.get("https://wger.de/api/v2/?language=2&"+hCtrl.searchTerm)
+    //         .then(function (response){
+    //             console.log("Response from API: ", response.data);
+    //             hCtrl.healthData = response.data;
+    //         });
+    //     }
+    // }
 
 /////////////////////////////////////////////////////////////////////////////////////
 //////////////////////Yumm.ly API Info for Recipe Generator////////////////////////
@@ -31,9 +31,11 @@ angular.module("http-app",[])
         var rCtrl = this;
         window.rCtrl=rCtrl;
         rCtrl.searchTerm;
+        rCtrl.loading=false;
         rCtrl.$sce = $sce
         rCtrl.testAPI = function () {
             console.info("recipeController is loaded");
+            rCtrl.loading=true;
             $http.get("http://api.yummly.com/v1/api/recipes?_app_id=813c62be&_app_key=363be200086a94534f517176a651f715&q="+rCtrl.searchTerm+"&maxResult=100")
             .then(function (response){
                 console.log("Response from API: ", response.data);
@@ -52,9 +54,9 @@ angular.module("http-app",[])
                             console.log(rCtrl.recipeData.matches[i].recipeURL)
                         });
                     })(i);
-
                     rCtrl.recipePageData = rCtrl.recipeData.matches.slice(0,10);
                     console.log("RECIPE PAGE DATA: ", rCtrl.recipePageData)
+                    rCtrl.loading=false;
                 }
             });
 
