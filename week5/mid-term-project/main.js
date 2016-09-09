@@ -32,7 +32,8 @@ angular.module("http-app",[])
         window.rCtrl=rCtrl;
         rCtrl.searchTerm;
         rCtrl.loading=false;
-        rCtrl.$sce = $sce
+        rCtrl.$sce = $sce;
+        $.featherlight.defaults.loading="<img src='/dickbutt.gif'></img>";
         rCtrl.testAPI = function () {
             console.info("recipeController is loaded");
             rCtrl.loading=true;
@@ -57,6 +58,7 @@ angular.module("http-app",[])
                     rCtrl.recipePageData = rCtrl.recipeData.matches.slice(0,10);
                     console.log("RECIPE PAGE DATA: ", rCtrl.recipePageData)
                     rCtrl.loading=false;
+
                 }
             });
 
