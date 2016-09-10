@@ -3,7 +3,10 @@ body, html{
     position: relative;
     height: 100%;
     width: 100%;
-    background-image: url("http://www.qqxxzx.com/images/wallpaper-pattern/wallpaper-pattern-14.png");
+}
+
+body{
+    background-image: url("/background-image.png");   
 }
 /*Navbar Style*/
 .navbar{
