@@ -66,6 +66,31 @@ img{
     border-radius: 15px;
     border: 2px solid white;
 }
+
+/*recipe card style*/
+
+.well{
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: bolder;
+    border: #101010 5px solid;
+}
+
+h3{
+    float:right;
+    font-size:2em;
+}
+
 .list-inline .label{
     margin-right: 5px;
+    float:right;
+}
+
+.image{
+    width:250px;
+}
+
+/*footer-styles*/
+
+footer p{
+    font-size:1.5em;
 }
