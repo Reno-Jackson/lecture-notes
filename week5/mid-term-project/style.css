@@ -10,6 +10,7 @@ body, html{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
 
 }
 /*Dropdown Navbar Style*/
@@ -64,4 +65,7 @@ img{
     margin:auto;
     border-radius: 15px;
     border: 2px solid white;
+}
+.list-inline .label{
+    margin-right: 5px;
 }

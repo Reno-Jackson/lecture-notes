@@ -176,8 +176,8 @@
                         <a href="{{recipe.recipeURL}}" data-featherlight-iframe-width="1000" data-featherlight-iframe-height="800" data-featherlight="iframe">Click for Recipe</a>
                     </h3>
                     <img class="image" src="{{recipe.smallImageUrls[0]}}"></img>
-                    <ul>
-                        <li ng-repeat="ingredient in recipe.ingredients">
+                    <ul class="list-inline">
+                        <li class="label label-default" ng-repeat="ingredient in recipe.ingredients">
                             {{ingredient}}
                         </li>
                     </ul>
