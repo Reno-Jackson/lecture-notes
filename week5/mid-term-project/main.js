@@ -2,7 +2,7 @@
 //////////////////////wger.de API Info for Exercise Generator////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
 
-angular.module("http-app",[])
+angular.module("Wünderbar-app",[])
     // .controller("health",healthController)
     .controller("recipe",recipeController)
     // .factory
@@ -32,7 +32,7 @@ angular.module("http-app",[])
         rCtrl.searchTerm;
         rCtrl.loading=false;
         rCtrl.$sce = $sce;
-        $.featherlight.defaults.loading="<img src='/dickbutt.gif'></img>";
+        $.featherlight.defaults.loading="<img src='/a-loading.gif'></img>";
         rCtrl.testAPI = function () {
             console.info("recipeController is loaded");
             rCtrl.loading=true;

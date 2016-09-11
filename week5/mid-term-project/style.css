@@ -3,9 +3,7 @@ body, html{
     position: relative;
     height: 100%;
     width: 100%;
-    font-family: 'Pacifico', cursive;
     font-size:large;
-
 }
 
 body{
@@ -16,13 +14,17 @@ h1{
     font-size:5em;
 }
 
+.cursive{
+    font-family: 'Pacifico', cursive;
+}
+
 .jumbotron{
     background-color: transparent;
     font-weight:600;
     color: black;
     text-align: center;
-    -webkit-text-stroke: 1px white;
-    letter-spacing: 10px;
+    -webkit-text-stroke: .5px white;
+    letter-spacing: 7px;
 }
 /*Navbar Style*/
 .navbar{
@@ -81,7 +83,7 @@ h1{
 }
 /*Carousel Image*/
 .carousel{
-    padding-top: 60px;
+    padding-top: 10px;
 }
 
 img{
@@ -90,18 +92,23 @@ img{
     border: 2px solid white;
 }
 
+h2{
+    -webkit-text-stroke: .5px black;
+    letter-spacing: 1px;
+}
+
 /*recipe card style*/
 
 .well.recipe{
     list-style: none;
-    background-color: rgba(255, 255, 255, 0.9);
-    font-weight:400;
-    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0.9);
+    /*font-weight:200;*/
+    font-size: 1.5em;
     border: #101010 5px solid;
-    height: 400px;
-    width: 800px;
-    float:left;
     letter-spacing: 3px;
+    background-image: url("https://www.housedecorinteriors.co.uk/UserFiles/wallpapers/16_sanderson/187_options_10_wallpapers/SANDOPWCP103_z.jpg");
+    width: 800px;
+    margin: auto;
 }
 
 h3{
@@ -111,12 +118,16 @@ h3{
 }
 
 .image{
-    width:250px;
+    width: 100%;
+}
+
+#recipe-content {
+    margin-top: 10em;
 }
 
 .list-inline .label{
-    margin-right: 5px;
-    float:right;
+    margin: 4px;
+    font-weight: 200;
     padding: 10px;
     padding-bottom: 10px;
     display:inline-block;
