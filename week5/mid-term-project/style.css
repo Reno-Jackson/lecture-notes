@@ -3,10 +3,26 @@ body, html{
     position: relative;
     height: 100%;
     width: 100%;
+    font-family: 'Pacifico', cursive;
+    font-size:large;
+
 }
 
 body{
-    background-image: url("/background-image.png");   
+    background-image: url("/background-image.png");
+}
+
+h1{
+    font-size:5em;
+}
+
+.jumbotron{
+    background-color: transparent;
+    font-weight:600;
+    color: black;
+    text-align: center;
+    -webkit-text-stroke: 1px white;
+    letter-spacing: 10px;
 }
 /*Navbar Style*/
 .navbar{
@@ -64,6 +80,10 @@ body{
     border-color: darkgrey;
 }
 /*Carousel Image*/
+.carousel{
+    padding-top: 60px;
+}
+
 img{
     margin:auto;
     border-radius: 15px;
@@ -72,28 +92,39 @@ img{
 
 /*recipe card style*/
 
-.well{
+.well.recipe{
+    list-style: none;
     background-color: rgba(255, 255, 255, 0.9);
-    font-weight: bolder;
+    font-weight:400;
+    font-size: xx-large;
     border: #101010 5px solid;
+    height: 400px;
+    width: 800px;
+    float:left;
+    letter-spacing: 3px;
 }
 
 h3{
-    float:right;
-    font-size:2em;
-}
+    float:left;
+    font-size: xx-large;
 
-.list-inline .label{
-    margin-right: 5px;
-    float:right;
 }
 
 .image{
     width:250px;
 }
 
+.list-inline .label{
+    margin-right: 5px;
+    float:right;
+    padding: 10px;
+    padding-bottom: 10px;
+    display:inline-block;
+}
+
+
 /*footer-styles*/
 
-footer p{
-    font-size:1.5em;
+footer{
+    font-size:small;
 }

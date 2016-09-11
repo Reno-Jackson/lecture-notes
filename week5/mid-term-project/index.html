@@ -7,11 +7,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
         <script src="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
+        <script src="https://use.fontawesome.com/5eb3dcd43a.js"></script>
         <script src="/main.js"></script>
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
         <link rel="stylesheet" href="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -92,12 +92,8 @@
 <!-- /.container-fluid -->
             </nav>
         </header>
-        <hr>
-        <br>
-        <br>
-        <hr>
-
 <!--Beginning of Carousel  -->
+        <h1 class="jumbotron">Wünderbar</h1>
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -219,16 +215,20 @@
 <!--recipe loaded area  -->
         <section class="container" id="recipe-content">
             <ul>
-                <li class="well" ng-repeat="recipe in rCtrl.recipePageData">
-                    <h3>{{recipe.recipeName}}:
-                        <a href="{{recipe.recipeURL}}" data-featherlight-iframe-width="1000" data-featherlight-iframe-height="800" data-featherlight="iframe">Click for Recipe</a>
-                    </h3>
-                    <img class="image" src="{{recipe.smallImageUrls[0]}}"></img>
-                    <ul class="list-inline">
-                        <li class="label label-default" ng-repeat="ingredient in recipe.ingredients">
-                            {{ingredient}}
-                        </li>
-                    </ul>
+                <li class="well recipe" ng-repeat="recipe in rCtrl.recipePageData">
+                    <h2 class="pull-right">{{recipe.recipeName}}
+                        <div>
+                            <a href="{{recipe.recipeURL}}" data-featherlight-iframe-width="1000" data-featherlight-iframe-height="800" data-featherlight="iframe">Click for Recipe</a>
+                        </div>
+                    </h2>
+                    <img class="image center" src="{{recipe.smallImageUrls[0]}}"></img>
+                    <div class="pull-right">
+                        <ul class="list-inline">
+                            <li class="label label-default pull-right" ng-repeat="ingredient in recipe.ingredients">
+                                {{ingredient}}
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
             <nav class="text-center" id="paginator" ng-if="rCtrl.recipeData.matches" aria-label="page navigation">
@@ -258,8 +258,8 @@
         </section>
         <footer class="well well-sm">
             <h2 class="text-center">About Us</h2>
-            <p class="text-center">&copy; Copyright 2016 Snozzberries Inc.</p>
-            <p class="text-center">Contact Us <a href="http://www.nbc.com/saturday-night-live/video/dillon-edwards-investments/n11241" data-featherlight-iframe-width="500" data-featherlight-iframe-height="500" data-featherlight="iframe">@clownpenis.fart.edu</a></p>
+            <p class="text-center">&copy; Copyright 2016 Wünderbar Inc.</p>
+            <p class="text-center">Contact Us <a href="http://www.nbc.com/saturday-night-live/video/dillon-edwards-investments/n11241" data-featherlight-iframe-width="500" data-featherlight-iframe-height="500" data-featherlight="iframe">admin@jdporter.com</a></p>
         </footer>
         </div>
     </body>

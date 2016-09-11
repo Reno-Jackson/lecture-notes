@@ -29,7 +29,6 @@ angular.module("http-app",[])
 
     function recipeController ($http, $sce){
         var rCtrl = this;
-        window.rCtrl=rCtrl;
         rCtrl.searchTerm;
         rCtrl.loading=false;
         rCtrl.$sce = $sce;
@@ -37,7 +36,7 @@ angular.module("http-app",[])
         rCtrl.testAPI = function () {
             console.info("recipeController is loaded");
             rCtrl.loading=true;
-            $http.get("http://api.yummly.com/v1/api/recipes?_app_id=813c62be&_app_key=363be200086a94534f517176a651f715&q="+rCtrl.searchTerm+"&maxResult=100")
+            $http.get("http://api.yummly.com/v1/api/recipes?_app_id=813c62be&_app_key=363be200086a94534f517176a651f715&q="+rCtrl.searchTerm+"&maxResult=10")
             .then(function (response){
                 console.log("Response from API: ", response.data);
                 rCtrl.recipeData = [];
@@ -50,7 +49,6 @@ angular.module("http-app",[])
                         $http.get("http://api.yummly.com/v1/api/recipe/"+id+"?_app_id=813c62be&_app_key=363be200086a94534f517176a651f715")
                         .then(function (response){
                             console.log(response.data);
-                            // console.log("Recipe " + i + ": ", rCtrl.recipeData.matches[i])
                             rCtrl.recipeData.matches[i].recipeURL= response.data.source.sourceRecipeUrl;
                             console.log(rCtrl.recipeData.matches[i].recipeURL)
                         });
