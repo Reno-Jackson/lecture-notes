@@ -12,7 +12,6 @@ angular.module("Wünderbar-app",[])
 
     // function healthController ($http, $sce){
     //     var hCtrl = this;
-    //     hCtrl.$sce=$sce;
     //     hCtrl.testAPI = function () {
     //         console.info("healthController is loaded");
     //         $http.get("https://wger.de/api/v2/?language=2&"+hCtrl.searchTerm)
@@ -36,7 +35,7 @@ angular.module("Wünderbar-app",[])
         rCtrl.testAPI = function () {
             console.info("recipeController is loaded");
             rCtrl.loading=true;
-            $http.get("http://api.yummly.com/v1/api/recipes?_app_id=813c62be&_app_key=363be200086a94534f517176a651f715&q="+rCtrl.searchTerm+"&maxResult=10")
+            $http.get("http://api.yummly.com/v1/api/recipes?_app_id=&_app_key=&q="+rCtrl.searchTerm+"&maxResult=10")
             .then(function (response){
                 console.log("Response from API: ", response.data);
                 rCtrl.recipeData = [];
