@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Countries">
     <head>
-        <meta charset="utf-8">
         <title>Ajax-Countries</title>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+        <script src="./index.js"></script>
     </head>
-    <body>
-        <button type="button" name="button">Load Countries</button>
+    <body ng-controller="countryController as cCtrl">
+        <form action="/search" method="get">
+            <input type="text" name="name" ng-model="cCtrl.searchCountries" placeholder="Enter Country Name">
+            <button ng-click="cCtrl.getcountries()" type="submit">Load Country</button>
+        </form>
+        {{cCtrl.countries}}
     </body>
 </html>

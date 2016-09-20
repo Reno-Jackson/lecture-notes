@@ -1,5 +1,7 @@
-module.angular("Countries",["$http"])
+angular.module("Countries",[])
       .controller("countryController", country);
+
+      country.$inject=["$http"]
 
       function country($http){
           var cCtrl= this;
@@ -9,6 +11,7 @@ module.angular("Countries",["$http"])
               $http.get("/countries")
                     .then(function(response){
                         cCtrl.countries= response.data
+                        console.log("countries are present", response.data)
                     },function (err) {
                         console.log("Error Countries")
                     });
