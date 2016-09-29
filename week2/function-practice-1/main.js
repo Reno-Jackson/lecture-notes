@@ -1,8 +1,10 @@
 // triple 5
-var triplefive
-for (triplefive = 0; triplefive < 3; triplefive++) {
-    console.log("Five!")
+function fiveTres(){
+    for (var tripleFive = 0; tripleFive < 3; tripleFive++) {
+        console.log("Five!")
+        }
 }
+fiveTres();
 
 // lastLetter
 lastLetter("string")
@@ -10,6 +12,7 @@ lastLetter("string")
 function lastLetter(string) {
     console.log(string.substring(string.length - 1, string.length))
 }
+lastLetter();
 
 // square
 
@@ -47,7 +50,9 @@ function sun(word) {
     for (i = 0; i < word.length; i++) {
         if (word.substring(i, i + 3) == "sun") {
             console.log("True");
-            return ("True");
+            return true
+        } else {
+            return false
         }
     }
     console.log("Type word with sun in it");
@@ -55,8 +60,8 @@ function sun(word) {
 // tiny
 function tiny(number) {
     if (number > 0 && number < 1){
-    console.log("True")
-    return true
+        console.log("True")
+        return true
     }
     else {
         return false
