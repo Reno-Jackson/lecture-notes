@@ -45,7 +45,7 @@ Amir
 <em>Solution:</em>
 
 <pre>
-for(var i=0; i &lt; students.length; i++) {
+for(var i=0; i < students.length; i++) {
  console.log(students[i].name);
 }
 </pre>
