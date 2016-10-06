@@ -1,0 +1,15 @@
+.marker {
+    width: 42px;
+    height: 42px;
+    background-image: url('charmander.gif');
+    position: absolute;
+    border-radius: 10%;
+}
+
+#markers {
+    position: relative;
+}
+
+#map {
+    width: 1600px;
+}
