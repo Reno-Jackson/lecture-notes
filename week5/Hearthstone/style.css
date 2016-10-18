@@ -1,0 +1,26 @@
+body{
+    background-image:url('./images/background-color.jpg');
+    background-attachment: fixed;
+    font-family: 'Francois One', sans-serif;
+}
+.blackborder{
+    -webkit-text-stroke: 1px black;
+}
+
+footer.well{
+    background-image:url('./images/footer-color.jpg');
+    border: 1px solid black;
+    background-attachment: fixed;
+}
+
+.jumbotron{
+    text-align: center;
+    background-color: transparent;
+}
+.whiteborder{
+    color: firebrick;
+    -webkit-text-stroke: 1px goldenrod;
+}
+.whiteoutline{
+    border: 1px solid white;
+}
