@@ -1,26 +1,50 @@
-body{
-    background-image:url('./images/background-color.jpg');
+body {
+    background-image: url('./images/background-color.jpg');
     background-attachment: fixed;
     font-family: 'Francois One', sans-serif;
 }
-.blackborder{
+
+.blackborder {
     -webkit-text-stroke: 1px black;
 }
 
-footer.well{
-    background-image:url('./images/footer-color.jpg');
+footer.well {
+    background-image: url('./images/footer-color.jpg');
     border: 1px solid black;
     background-attachment: fixed;
 }
 
-.jumbotron{
+.jumbotron {
     text-align: center;
     background-color: transparent;
 }
-.whiteborder{
+
+.noBackground {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.nostyle {
+    text-decoration: none;
+    color: white;
+}
+
+.nostyle:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.whiteborder {
     color: firebrick;
     -webkit-text-stroke: 1px goldenrod;
 }
-.whiteoutline{
+
+.whiteoutline {
     border: 1px solid white;
 }

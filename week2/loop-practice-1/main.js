@@ -16,7 +16,7 @@ for (var i=1; i <=64; i=i*2){
 
 for (var i=1; i <=3; i++){
     for(var b=1; b<4; b++){
-        console.log(i); 
+        console.log(i);
     }
     console.log(b);
 }

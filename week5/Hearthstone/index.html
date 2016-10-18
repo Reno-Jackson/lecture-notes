@@ -3,100 +3,103 @@
 
 <head>
     <meta charset='utf-8'>
-    <title>Hearthstoned</title>
+    <title>git.Hearthstoned</title>
     <!-- JS Script tags go here, my own JS is always at bottom -->
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/angular-route-segment/1.5.1/angular-route-segment.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js'></script>
     <script src='main.js'></script>
     <!--CSS link tags go here, my own CSS is always at bottom  -->
     <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css'>
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Francois+One'>
-    <link rel='shortcut icon' href='./images/hs-favicon.ico' type='image/x-icon'/>
+    <link rel='shortcut icon' href='./images/hs-favicon.ico' type='image/x-icon' />
     <link rel='stylesheet' href='style.css'>
     <style>
-      /* Remove the navbar's default margin-bottom and rounded borders */
-      .navbar {
-        margin-bottom: 0;
-        border-radius: 0;
-      }
+        /* Remove the navbar's default margin-bottom and rounded borders */
 
-      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-      .row.content {height: 450px}
-
-      /* Set gray background color and 100% height */
-      .sidenav {
-        padding-top: 20px;
-        background-color: #f1f1f1;
-        height: 100%;
-      }
-
-      /* Set black background color, white text and some padding */
-      footer {
-        background-color: #555;
-        color: white;
-        padding: 25px;
-      }
-
-      /* On small screens, set height to 'auto' for sidenav and grid */
-      @media screen and (max-width: 767px) {
-        .sidenav {
-          height: auto;
-          padding: 15px;
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
         }
-        .row.content {height:auto;}
-      }
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+        .row.content {
+            height: 450px
+        }
+        /* Set gray background color and 100% height */
+
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 25px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
     </style>
 </head>
 
 <body ng-controller='CardController as deckCtrl'>
     <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <div class='active'>
-              <img src='./images/hs-symbol.png' style='width:20%'/>
-              <span style='color:white'>
-                Hearthstoned Inc.
+                <div class='active'>
+                    <img src='./images/hs-symbol.png' style='width:20%' />
+                    <span style='color:white'>
+                git.Hearthstoned Inc.
             </span>
-          </div>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#/"><span class='glyphicon glyphicon-home'></span> Home</a></li>
+                    <li><a href="#/contact"><span class='glyphicon glyphicon-envelope'></span> Contact Us</a></li>
+                    <!-- <li><a href="#/classes"><span class='glyphicon glyphicon-th'></span> Classes</a></li> -->
+                    <li><a href="//us.battle.net/account/download/?show=hearthstone&style=hearthstone" target="_blank"><span class='glyphicon glyphicon-knight'></span> Play Hearthstone</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href='#'><span class='glyphicon glyphicon-user'></span> Sign-Up</a></li>
+                    <li><a href='#'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-left">
-            <li><a href="#"><span class='glyphicon glyphicon-home'></span> Home</a></li>
-            <li><a href="#contact"><span class='glyphicon glyphicon-envelope'></span> Contact Us</a></li>
-            <li><a href="#jump"><span class='glyphicon glyphicon-th'></span> Classes</a></li>
-            <li><a href="//us.battle.net/account/download/?show=hearthstone&style=hearthstone" target="_blank"><span class='glyphicon glyphicon-knight'></span> Play Hearthstone</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href='#'><span class='glyphicon glyphicon-user'></span> Sign-Up</a></li>
-            <li><a href='#'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>
-          </ul>
-        </div>
-      </div>
     </nav>
     <div class='jumbotron'>
-        <img src='./images/Hearthstone_Logo.png' style='width:70%'/>
+        <img src='./images/Hearthstone_Logo.png' style='width:70%' />
     </div>
-    <p>
-        {{deckCtrl.greeting}}
-    </p>
+    <!--Begining of Carousel-->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-          <div class="item active">
-              <img src='./images/medivh-karazhan.jpg'>
-            <div class="carousel-caption">
-               <img style='width:40%' src='./images/karazhan-logo.png'/>
-               <h2 class='blackborder'>Medivh is throwing a Party and you're invited</h2>
-               <button class='btn btn-primary btn-lg whiteoutline' type='button' name='button'>Get Latest Expansion</button>
+            <div class="item active">
+                <img src='./images/medivh-karazhan.jpg'>
+                <div class="carousel-caption">
+                    <img style='width:40%' src='./images/karazhan-logo.png' />
+                    <h2 class='blackborder'>Medivh is throwing a Party and you're invited</h2>
+                    <button class='btn btn-primary btn-lg whiteoutline' type='button' name='button'><a class='nostyle' href="//us.battle.net/shop/en/product/hearthstone-one-night-in-karazhan" target="_blank">Get Latest Expansion</a></button>
+                </div>
             </div>
-          </div>
         </div>
         <!-- Left and right controls -->
         <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -107,56 +110,88 @@
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a> -->
+    </div><br>
+    <!--Search Bar starts here-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="input-group">
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        	<span id="search_concept">Filter by</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#contains">Contains</a></li>
+                            <li><a href="#its_equal">It's equal</a></li>
+                            <li><a href="#greather_than">Greather than ></a></li>
+                            <li><a href="#less_than">Less than < </a></li>
+                            <li class="divider"></li>
+                            <li><a href="#all">Anything</a></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="search_param" value="all" id="search_param">
+                    <input type="text" class="form-control" name="x" placeholder="Search for Cards">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="container text-center">
-      <h1 class='whiteborder'><a name='jump'></a>Choose a Hero</h1><br>
-      <div class="row">
-        <div class="col-sm-4">
-        <h2 class='whiteborder'>Warrior</h2>
-          <a href="#/warrior"><img src='./golden-portraits/garrosh.png' class="img-responsive" style="width:100%"></a>
-        </div>
-        <div class="col-sm-4">
-            <h2 class='whiteborder'>Shaman</h2>
-          <a href="#/shaman"><img src='./golden-portraits/thrall.png' class="img-responsive" style="width:100%"></a>
-        </div>
-        <div class="col-sm-4">
-            <h2 class='whiteborder'>Rogue</h2>
-          <a href="#/rogue"><img src='./golden-portraits/valeera.png' class="img-responsive" style="width:100%"></a>
-        </div>
-        <div class="col-sm-4">
-            <h2 class='whiteborder'>Paladin</h2>
-          <a href="#/paladin"><img src='./golden-portraits/uther.png' class="img-responsive" style="width:100%"></a>
-        </div>
-        <div class="col-sm-4">
-            <h2 class='whiteborder'>Hunter</h2>
-          <a href="#/hunter"><img src='./golden-portraits/rexxar.png' class="img-responsive" style="width:100%"></a>
-        </div>
-        <div class="col-sm-4">
-            <h2 class='whiteborder'>Druid</h2>
-          <a href="#/druid"><img src='./golden-portraits/malfurion.png' class="img-responsive" style="width:100%"></a>
-        </div>
-        <div class="col-sm-4">
-            <h2 class='whiteborder'>Warlock</h2>
-          <a href="#/warlock"><img src='./golden-portraits/guldan.png' class="img-responsive" style="width:100%"></a>
-        </div>
-        <div class="col-sm-4">
-            <h2 class='whiteborder'>Mage</h2>
-          <a href="#/mage"><img src='./golden-portraits/jaina.png' class="img-responsive" style="width:100%"></a>
-        </div>
-        <div class="col-sm-4">
-            <h2 class='whiteborder'>Priest</h2>
-          <a href="#/priest"><img src='./golden-portraits/anduin.png' class="img-responsive" style="width:100%"></a>
-        </div>
-      </div>
-    </div><br>
-    <p>
-        Basic Cards {{deckCtrl.getCards.data.Basic[19]}}
-    </p>
+
+    <section ng-view>
+        <!-- <div class="container text-center">
+            <h1 class='whiteborder'><a name='classes'></a>Choose a Hero</h1><br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2 class='whiteborder'>Warrior</h2>
+                    <a href="#/hero/warrior"><img src='./golden-portraits/garrosh.png' class="img-responsive" style="width:100%"></a>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class='whiteborder'>Shaman</h2>
+                    <a href="#/shaman"><img src='./golden-portraits/thrall.png' class="img-responsive" style="width:100%"></a>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class='whiteborder'>Rogue</h2>
+                    <a href="#/rogue"><img src='./golden-portraits/valeera.png' class="img-responsive" style="width:100%"></a>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class='whiteborder'>Paladin</h2>
+                    <a href="#/paladin"><img src='./golden-portraits/uther.png' class="img-responsive" style="width:100%"></a>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class='whiteborder'>Hunter</h2>
+                    <a href="#/hunter"><img src='./golden-portraits/rexxar.png' class="img-responsive" style="width:100%"></a>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class='whiteborder'>Druid</h2>
+                    <a href="#/druid"><img src='./golden-portraits/malfurion.png' class="img-responsive" style="width:100%"></a>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class='whiteborder'>Warlock</h2>
+                    <a href="#/warlock"><img src='./golden-portraits/guldan.png' class="img-responsive" style="width:100%"></a>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class='whiteborder'>Mage</h2>
+                    <a href="#/mage"><img src='./golden-portraits/jaina.png' class="img-responsive" style="width:100%"></a>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class='whiteborder'>Priest</h2>
+                    <a href="#/priest"><img src='./golden-portraits/anduin.png' class="img-responsive" style="width:100%"></a>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <br>
+    <!-- <p>
+        Basic Cards {{deckCtrl.getCards.data.Basic[99]}}
+    </p> -->
 </body>
 <footer class="container-fluid text-center well">
-    <img src='./images/tupac.png' style='width:20%'/>
+    <img src='./images/tupac.png' style='width:20%' />
     <h4 class="text-center blackborder">&copy; Copyright 2016 Heartstoned Inc. & Thug Life Productions, LLC</h4>
     <h4 class="text-center blackborder"><a name="contact"></a>Contact Us admin@jdporter.com</h4>
 </footer>
+
 </html>

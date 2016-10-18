@@ -15,10 +15,7 @@
 <body>
     <section ng-controller='goldCtrl as gold'>
         <div id="markers">
-            <p class="marker"
-                ng-repeat="marker in gold.markers"
-                ng-style="marker"
-                ng-click="gold.removeMarker($event, $index)">
+            <p class="marker" ng-repeat="marker in gold.markers" ng-style="marker" ng-click="gold.removeMarker($event, $index)">
             </p>
         </div>
         <div id="map" ng-click="gold.addMarker($event)">

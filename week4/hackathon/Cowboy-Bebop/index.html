@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AnimeApp">
+
+<head>
+    <title>Roids Deep</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--CSS script links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair+Display+SC">
+    <link rel="stylesheet" href="main.css">
+    <!--JS script tags-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js"></script>
+    <script src="Rpg-Awesome-master/rpg-awesome-tests.js"></script>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+        /* Add a gray background color and some padding to the footer */
+
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            /* Set width to 100% */
+            margin: auto;
+            min-height: 200px;
+        }
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body ng-controller="MainController as main">
+
+    <div class="header text-center">
+        <img src="./images/FFVII_Remake_Logo_Textless.png" />
+        <h1>ROIDS DEEP</h1>
+    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <!-- <b>API URL:</b> -->
+                <!-- <pre id="reqObject"></pre> -->
+
+
+                <img id="apod_img_id" style="height:500px" />
+
+                <div class="carousel-caption">
+                    <h1>Image of the day by NASA</h1>
+                    <h3 id="apod_title"></h3>
+                    <p id="apod_explaination"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center description">
+        <br>
+        <form ng-submit="main.getDay()">
+            <input name="name" type="text" class="form-control" placeholder="Search by Date (YYYY-MM-DD)" ng-model="main.searchName">
+        </form>
+
+
+        <h1 ng-show="main.editable" class="searchDate">{{ main.searchName | date:"fullDate"}}</h1>
+        <p> This app tells you how close we all come to <strong>EXTINCTION</strong> within the last week. Please inform your friends if we are facing Armageddon!
+            <div class="row">
+
+
+
+                <div class="col-md-6 asteroid well " ng-repeat="asteroid in main.asteroidList">
+                    <h2>Asteroid {{asteroid.name}}</h2>
+                    <p class="hazard" ng-show="{{asteroid.is_potentially_hazardous_asteroid}}">Potentially Hazardous!!!</p>
+
+                    <p>Diameter {{asteroid.diameter | number:0}} ft</p>
+                    <p>Velocity {{asteroid.velocity | number:0}} mph</p>
+                    <p>Missed by {{asteroid.distance | number:0}} miles</p>
+                    <a class="btn btn-danger" ng-href="{{asteroid.url}}" target="_blank">More info</a>
+                </div>
+
+            </div>
+    </div><br>
+
+    <footer class="container-fluid text-center josh">
+        <h3>Brought to you by</h3>
+        <h1>THE SPACE COWBOYS</h1>
+        <img height="300px" width="300px" src="./images/joshua.jpg">
+        <img height="300px" width="300px" src="./images/ryan.jpg">
+        <img height="300px" width="300px" src="./images/justin.jpg">
+        <img height="300px" width="300px" src="./images/jeff.jpg">
+        <audio controls><source src="./audio/tank.mp3" type="audio/mpeg"></audio>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

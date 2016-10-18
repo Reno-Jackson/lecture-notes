@@ -1,0 +1,20 @@
+angular.module('Chuck', [])
+    .controller('chuckQuote', quoteController)
+    .controller('APIHack', HackController)
+
+quoteController.$inject = ['$http'];
+HackController.$inject = ['$http'];
+
+function quoteController ($http) {
+    var qCtrl = this;
+    qCtrl.jokeData = {value:{joke:''}}
+    qCtrl.testAPI = function () {
+        console.log('Test');
+        $http.get('http://api.icndb.com/jokes/random')
+        .then(function (response){
+        console.log("Response from API: ", response.data);
+        qCtrl.jokeData = response.data;
+        });
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

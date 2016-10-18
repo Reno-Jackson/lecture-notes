@@ -45,10 +45,6 @@ form{
     color: gray;
 }
 
-.linethru::after{
-    text-decoration: line-through;
-}
-
 .head{
     background-color: #63E683;
     border-bottom: 5px green;

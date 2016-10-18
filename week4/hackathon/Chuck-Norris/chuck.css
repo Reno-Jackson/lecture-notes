@@ -1,0 +1,28 @@
+
+
+.jumbotron{
+    background-color:transparent;
+    color: white;
+}
+
+html body{
+    background-image: url("http://wallpapercave.com/wp/uCtCeTs.jpg");
+    background-size: 100%
+}
+
+form {
+    text-align: center;
+    width: 100%;
+}
+
+section{
+    margin-top:22%;
+    color: white;
+}
+
+.btn{
+    margin-top: 5px;
+    background: alpinewhite;
+    color:forestgreen;
+
+}
