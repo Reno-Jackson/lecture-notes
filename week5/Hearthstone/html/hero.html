@@ -1,6 +1,52 @@
-<h1>Hero Page</h1>
+<!--Hero Bio Page View for Cards  -->
 
-<div>
-    <img ng-repeat="cards in deckCtrl.getCards" ng-src="{{cards.imgGold}}">
-    </img>
+<!--Image to Button Area -->
+<h1>Scroll through the {{deckCtrl.charClass}} Gallery</h1>
+<div class="profile">
+    <img id='banner' ng-src="{{deckCtrl.classBackground}}" />
+    <img id='portrait' ng-src="{{deckCtrl.goldPortraits}}" />
+    <img id='heropower' style='width:10%' ng-src="{{deckCtrl.heroPower}}" />
+    <h3 id='herodesc'>{{deckCtrl.classDesc}}</h3>
 </div>
+
+
+
+
+<button class='cardclick' type="button " name="button " data-container="body " data-toggle="popover " data-placement="right " title="Card info: " data-content="{{cards.flavor || 'No flavor text bitch!'}} " ng-repeat="cards in deckCtrl.getCards ">
+    <img ng-src="{{cards.imgGold}} ">
+</button>
+
+<script type="text/javascript ">
+    setTimeout(function() {
+        console.log("Popovers running! ")
+        $('[data-toggle="popover "]').popover()
+    }, 1000);
+</script>
+
+<!--Pagination for Loaded Card images  -->
+
+<!-- <nav class="text-center " id="paginator " ng-if="deckCtrl.getCards.matches " aria-label="page navigation ">
+    <ul class="pagination pagination-lg ">
+        <li>
+            <a class="numbackground " href="# " aria-label="Previous ">
+                <span aria-hidden="true ">&laquo;</span>
+            </a>
+        </li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(1) " href="# ">1</a></li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(2) " href="# ">2</a></li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(3) " href="# ">3</a></li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(4) " href="# ">4</a></li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(5) " href="# ">5</a></li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(6) " href="# ">6</a></li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(7) " href="# ">7</a></li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(8) " href="# ">8</a></li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(9) " href="# ">9</a></li>
+        <li><a class="numbackground " ng-click="rCtrl.getPage(10) " href="# ">10</a></li>
+        <li>
+            <a class="numbackground " href="# " aria-label="Next ">
+                <span aria-hidden="true ">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav> -->
+>
