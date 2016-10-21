@@ -8,7 +8,6 @@
     <!-- JS Script tags go here, my own JS is always at bottom -->
 
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js'></script>
-    <!-- <script src='//cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js'></script> -->
     <script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js'></script>
@@ -122,24 +121,28 @@
 
 
     <!--Search Bar starts here-->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
                 <div class="input-group">
                     <div class="input-group-btn search-panel">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        	<span id="search_concept">Filter by</span> <span class="caret"></span>
+                        	<span id="search_concept">Filter by</span><span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#contains">Contains</a></li>
-                            <li><a href="#its_equal">It's equal</a></li>
-                            <li><a href="#greather_than">Greather than ></a></li>
-                            <li><a href="#less_than">Less than < </a></li>
-                            <li class="divider"></li>
-                            <li><a href="#all">Anything</a></li>
+                            <li><a href="#all">All Cards</a></li>
+                            <li><a href="#basic">Basic Set</a></li>
+                            <li><a href="#classic">Classic Set</a></li>
+                            <li><a href="#naxx">Curse of Naxxramus</a></li>
+                            <li><a href="#gvg">Goblins and Gnomes</a></li>
+                            <li><a href="#brkm">Blackrock Mountain</a></li>
+                            <li><a href="#tgt">The Grand Tournamnt</a></li>
+                            <li><a href="#loe">League of Explorers</a></li>
+                            <li><a href="#wotog">Whispers of the Old Gods</a></li>
+                            <li><a href="#onik">One Night in Karazhan</a></li>
                         </ul>
                     </div>
-                    <input type="hidden" name="search_param" value="all" id="search_param">
+                    <input ng-model='deckCtrl.searchCards' type="hidden" name="search_param" value="all" id="search_param">
                     <input type="text" class="form-control" name="x" placeholder="Search for Cards">
                     <span class="input-group-btn">
                         <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span></button>
@@ -147,11 +150,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!--ng-view section for looking at the top of the page -->
-    <section ng-view></section>
+    <article ng-view>
+    </article>
     <br>
 </body>
 
